@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="products">
+        <h1>PRODUTOS</h1>
+        <div class="list">
+            <div class="product" *ngFor="let product of products">
+                <button [class.selected]="product === selectedProduct" type="button" (click)="onSelect(product)">{{product.name}}</button>
+            </div>
+        </div>
+        <div class="selectedProduct" *ngIf="selectedProduct">
+            <div class="title">
+                <h1>{{selectedProduct.name}}</h1>
+            </div>
+            <div class="text">
+                <label for="id">ID: </label>
+                <input id="id" [(ngModel)]="selectedProduct.id" disabled>
+            </div>
+            <div class="text">
+                <label for="name">Nome: </label>
+                <input id="name" [(ngModel)]="selectedProduct.name">
+            </div>
+            <div class="text">
+                <label for="description">Descrição: </label>
+                <input id="description" [(ngModel)]="selectedProduct.description">
+            </div>
+            <div class="text">
+                <label for="quantity">Quantidade: </label>
+                <input type="number" id="quantity" [(ngModel)]="selectedProduct.quantity">
+            </div>
+            <div class="text">
+                <label for="price">Preço: </label>
+                <input type="number" id="price" [(ngModel)]="selectedProduct.price">
+            </div>
+            <div class="buttons">
+                <button class="button" (click)="onClear()">FECHAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="selectedProduct">
+    
+</div>

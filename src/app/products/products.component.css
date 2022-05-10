@@ -1,0 +1,100 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.products{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.products .list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.products .product{
+    margin-top: 20px;
+}
+
+.products .list button{
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.products .list button:hover{
+    background-color: rgb(24, 24, 24) !important;
+}
+
+.products .list button.selected{
+    background-color: rgb(24, 24, 24) !important;
+}
+
+.products .list button.selected:hover{
+    background-color: rgb(49, 49, 49) !important;
+}
+
+.selectedProduct{
+    margin-top: 20px;
+    width: 60%;
+    padding: 30px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    border-radius: 10px;
+}
+
+.selectedProduct .title{
+    width: 100%;
+    text-align: center;
+}
+
+.selectedProduct .text{
+    margin-top: 10px;
+}
+
+.selectedProduct .text input{
+    height: 25px;
+    width: 200px;
+    outline: none;
+}
+
+.selectedProduct .buttons{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.selectedProduct .buttons .button{
+    background-color: darkred;
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.selectedProduct .buttons .button:hover{
+    background-color: rgb(202, 0, 0) !important;
+}
